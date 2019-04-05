@@ -1,0 +1,425 @@
+-----------------Classes and Objects Session 2---------------------
+1st-----
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Wicket w = new Wicket();
+            Console.WriteLine("Enter the over");
+            w.Over = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the ball");
+            w.Ball = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the wicket type");
+            w.WicketType = Console.ReadLine();
+            Console.WriteLine("Enter the player name");
+            w.PlayerName = Console.ReadLine();
+            Console.WriteLine("Enter the bowler name");
+            w.BowlerName = Console.ReadLine();
+            Console.WriteLine("Wicket Details");
+            Console.WriteLine("Over : {0}",w.Over);
+            Console.WriteLine("Ball : {0}",w.Ball);
+            Console.WriteLine("Wicket Type : {0}",w.WicketType);
+            Console.WriteLine("Player Name : {0}",w.PlayerName);
+            Console.WriteLine("Bowler Name : {0}",w.BowlerName);
+        }
+    }
+}
+public class Wicket
+{
+   private long _over, _ball;
+    private String _wicketType, _playerName, _bowlerName;
+    public long Over
+    {
+        get
+        {
+            return _over;
+        }
+        set
+        {
+            this._over = value;
+        }
+    }
+    public long Ball
+    {
+        get
+        {
+            return _ball;
+        }
+        set
+        {
+            this._ball = value;
+        }
+    }
+    public string WicketType
+    {
+        get
+        {
+            return _wicketType;
+        }
+        set
+        {
+            this._wicketType = value;
+        }
+    }
+    public string PlayerName
+    {
+        get
+        {
+            return _playerName;
+        }
+        set
+        {
+            this._playerName = value;
+        }
+    }
+    public string BowlerName
+    {
+        get
+        {
+            return _bowlerName;
+        }
+        set
+        {
+            this._bowlerName = value;
+        }
+    }
+}
+
+
+
+
+
+
+
+2nd--------
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication57
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //string a,b,c,d,e;
+            Team t = new Team();
+             Console.WriteLine("Enter the team name");
+        t.Name = Console.ReadLine();
+        Console.WriteLine("Enter the coach name");
+       t.Coach = Console.ReadLine();
+        Console.WriteLine("Enter the location name");
+        t.Location = Console.ReadLine();
+        Console.WriteLine("Enter the players name");
+        t.Players = Console.ReadLine();
+        Console.WriteLine("Enter the captain name");
+        t.Captain = Console.ReadLine();
+            
+            t.DisplayTeamDetails();
+        
+        }
+    }
+}
+public class Team
+{
+    public string _name, _coach, _location, _players, _captain;
+    //public Team(string a, string b, string c, string d, string e)
+    //{
+    //    _name = a;
+    //    _coach = b;
+    //    _location = c;
+    //    _players = d;
+    //    _captain = e;
+    //}
+    public string Captain
+    {
+        get { return _captain; }
+        set { _captain = value; }
+    }
+
+    public string Players
+    {
+        get { return _players; }
+        set { _players = value; }
+    }
+
+    public string Location
+    {
+        get { return _location; }
+        set { _location = value; }
+    }
+
+    public string Coach
+    {
+        get { return _coach; }
+        set { _coach = value; }
+    }
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+
+    public void DisplayTeamDetails()
+    {
+       
+         Console.WriteLine("Team Details");
+            Console.WriteLine("Team : {0}", Name);
+            Console.WriteLine("Coach : {0}", Coach);
+            Console.WriteLine("Location : {0}", Location);
+            Console.WriteLine("Players : {0}", Players);
+            Console.WriteLine("Captain : {0}", Captain);
+            Console.ReadLine();
+    }
+}
+
+
+
+
+
+3rd-------
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int c;
+            Player p = new Player();
+            Console.WriteLine("Enter the player name");
+            p.Name=Console.ReadLine();
+                        Console.WriteLine("Enter the country name");
+            p.Country=Console.ReadLine();
+                        Console.WriteLine("Enter the skill");
+            p.Skill=Console.ReadLine();
+             Console.WriteLine("Player Details");
+             Console.WriteLine("Player Name :{0}",p.Name);
+             Console.WriteLine("Country Name :{0}",p.Country);
+             Console.WriteLine("Skill :{0}",p.Skill);
+             Console.WriteLine("Verify and Update Player Details");
+            do
+            {
+                 Console.WriteLine("Menu");
+                 Console.WriteLine("1.Update Player Name");
+                 Console.WriteLine("2.Update Country Name");
+                 Console.WriteLine("3.Update Skill");
+                 Console.WriteLine("4.All informations Correct/Exit");
+                 Console.WriteLine("Type 1 or 2 or 3 or 4");
+                c=Convert.ToInt32(Console.ReadLine());
+                switch(c)
+                {
+                    case 1:
+                        Console.WriteLine("The current player name is {0}",p.Name);
+                         Console.WriteLine("Enter the player name");
+                        String s=Console.ReadLine();
+                        p.Name=s;
+                        break;
+                    case 2:
+                        Console.WriteLine("The current country name is {0}",p.Country);
+                         Console.WriteLine("Enter the country name");
+                        s=Console.ReadLine();
+                        p.Country=s;
+                        break;
+                    case 3:
+                        Console.WriteLine("The current skill is {0}",p.Skill);
+                         Console.WriteLine("Enter the skill");
+                        s=Console.ReadLine();
+                        p.Skill=s;
+                        break;
+                    case 4:
+                           Console.WriteLine("Player Details");
+             Console.WriteLine("Player Name :{0}",p.Name);
+             Console.WriteLine("Country Name :{0}", p.Country);
+             Console.WriteLine("Skill :{0}",p.Skill);
+                        break;
+                }
+            }while(c!=4);
+        }
+    }
+}
+public class Player
+{
+    private string _name,_country,_skill;
+    public string Name
+    {
+        get{
+            return _name;
+        }
+        set{
+            this._name=value;
+        }
+    }
+       public string Country
+    {
+        get{
+            return _country;
+        }
+        set{
+            this._country=value;
+        }
+    }
+   public string Skill
+    {
+        get{
+            return _skill;
+        }
+        set{
+            this._skill=value;
+        }
+    }
+}
+
+
+
+
+
+
+4th--------
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication58
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int c;
+            Venue v = new Venue();
+            Console.WriteLine("Enter the venue name");
+            v.Name = Console.ReadLine();
+            Console.WriteLine("Enter the city name");
+            v.City = Console.ReadLine();
+            Console.WriteLine("Venue Details");
+            Console.WriteLine("Venue Name : {0}",v.Name);
+            Console.WriteLine("City Name : {0}",v.City);
+            do
+            {
+                Console.WriteLine("Verify and Update Venue Details\nMenu\n1.Update Venue Name\n2.Update City Name\n3.All informations Correct/Exit\nType 1 or 2 or 3");
+                c=Convert.ToInt32(Console.ReadLine());
+                switch(c)
+                {
+                    case 1:
+                  Console.WriteLine("Enter the venue name");
+                        v.Name = Console.ReadLine();
+                            Console.WriteLine("Venue Details");
+            Console.WriteLine("Venue Name : {0}",v.Name);
+            Console.WriteLine("City Name : {0}",v.City);
+                        break;
+                    case 2:
+    Console.WriteLine("Enter the city name");
+            v.City = Console.ReadLine();
+            Console.WriteLine("Venue Details");
+            Console.WriteLine("Venue Name : {0}",v.Name);
+            Console.WriteLine("City Name : {0}",v.City);
+                        break;
+                    case 3:
+                              Console.WriteLine("Venue Details");
+            Console.WriteLine("Venue Name : {0}",v.Name);
+            Console.WriteLine("City Name : {0}",v.City);
+                        break;
+                }
+            }while(c!=3);
+        }
+    }
+}
+public class Venue
+{
+    string _name, _city;
+
+    public string City
+    {
+        get { return _city; }
+        set { _city = value; }
+    }
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+}
+
+
+
+
+
+
+
+5th----------
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ExtraType e = new ExtraType();
+            Console.WriteLine("Enter the extratype details");
+            String s = Console.ReadLine();
+            String[] str = s.Split(new char[] { '#' });
+            e.Name = str[0];
+            e.Runs = Convert.ToInt32(str[1]);
+            Console.WriteLine("ExtraType Details");
+            Console.WriteLine("Extra Type:{0}",e.Name);
+            Console.WriteLine("Runs:{0}",e.Runs);
+        }
+    }
+}
+public class ExtraType
+{
+    private string _name;
+    private long _runs;
+    public string Name
+    {
+        get
+        {
+            return _name;
+        }
+        set
+        {
+            this._name = value;
+        }
+    }
+    public long Runs
+    {
+          get
+        {
+            return _runs;
+        }
+        set
+        {
+            this._runs = value;
+        }
+    }
+}
